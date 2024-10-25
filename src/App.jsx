@@ -1,16 +1,10 @@
-
-import React from 'react';
-
+import ToDosPage from './pages/ToDosPage';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Your Vite React App</h1>
-        <p>Edit <code>src/App.jsx</code> and save to reload.</p>
-      </header>
-    </div>
+    <>
+      <ToDosPage />
+    </>
   );
 }
 
 export default App;
-  
