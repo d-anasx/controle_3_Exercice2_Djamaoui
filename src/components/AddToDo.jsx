@@ -13,7 +13,8 @@ const AddToDo = () => {
           dispatch({ type: 'UPDATE_TODO', payload: { id: Date.now(), title } })
           setEditing(false) 
         } else { 
-            dispatch({ type: 'ADD_TODO', payload: { id: Date.now(), title: title, completed: false } })
+            dispatch({ type: 'ADD_TODO', payload: { id: Date.now(), title: title, completed: false } });
+            setTitle('');
         }
      
     }

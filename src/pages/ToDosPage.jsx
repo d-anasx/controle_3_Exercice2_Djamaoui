@@ -28,7 +28,7 @@ const ToDosPage = () => {
 
   if (loading === 'pending') {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen bg-gray-100">
         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500"></div>
       </div>
     );
@@ -36,12 +36,13 @@ const ToDosPage = () => {
   if (error) {
     return (
       <div className="flex items-center justify-center h-screen bg-red-500 text-white">
-        <p>Error: {error}</p>
+        <p className="text-2xl font-bold">Error: {error}</p>
       </div>
     );
   }
   return (
-    <div className="container mx-auto p-4 w-[35rem]">
+    <div className="container mx-auto p-4 max-w-lg">
+      <h1 className="text-4xl font-bold mb-4">To-Do List</h1>
       <AddToDo />
       <div className="grid grid-cols-1 gap-4 p-4 bg-white border border-gray-200 rounded-lg shadow">
         {todos.map((todo) => (
@@ -53,3 +54,4 @@ const ToDosPage = () => {
 };
 
 export default ToDosPage;
+
